@@ -1,6 +1,6 @@
 # global-object-guard lets you control and Manage Global Object
 
-global-object-guard is a utility module which provides straight-forward, powerful functions
+`global-object-guard` is a utility module which provides straight-forward, powerful functions
 for working with global objects in JavaScript. Although originally designed for
 use with [Node.js](http://nodejs.org), it can not used in the
 browser.
@@ -38,6 +38,7 @@ obj = {name: "Kashish", age: 24};
 // Don't worry just check the Global Pollution if you want.
 var result = gb.getDifference();
 console.log("Checking Global Object Pollution: ", result);
+// Output: Checking Global Object Pollution:  { obj: [ { name: 'Kashish', age: 24 } ] }
 
 // You can RePosition Your Global Object State
 // This will Set Your Current Global State as a default State
@@ -47,14 +48,16 @@ gb.rePositionGlobalObject(global);
 // Recheck the Status
 result = gb.getDifference();
 console.log("After RePosition the Global Object: " + JSON.stringify(result));
+// After RePosition the Global Object: {}
 
-//Lets do some mistake
+// Lets do some mistake
 (function () {
     person = {address: "B4-90 US"}
 })();
 
 result = gb.getDifference();
 console.log("Opes Just hit the global object: " + JSON.stringify(result));
+// Opes Just hit the global object: {"person":[{"address":"B4-90 US"}]}
 
 // Let this GlobalObjectGuard take care this cleaning work.
 gb.refreshGlobalObject();
@@ -62,6 +65,7 @@ gb.refreshGlobalObject();
 // Check the status. Every Thing is Clean Now.
 result = gb.getDifference();
 console.log("Everything is clean by GlobalObjectGuard: " + JSON.stringify(result));
+// Everything is clean by GlobalObjectGuard: {}
 
 ```
 
