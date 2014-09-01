@@ -48,7 +48,7 @@ gb.rePositionGlobalObject(global);
 // Recheck the Status
 result = gb.getDifference();
 console.log("After RePosition the Global Object: " + JSON.stringify(result));
-// After RePosition the Global Object: {}
+// Output: After RePosition the Global Object: {}
 
 // Lets do some mistake
 (function () {
@@ -57,7 +57,7 @@ console.log("After RePosition the Global Object: " + JSON.stringify(result));
 
 result = gb.getDifference();
 console.log("Opes Just hit the global object: " + JSON.stringify(result));
-// Opes Just hit the global object: {"person":[{"address":"B4-90 US"}]}
+// Output: Opes Just hit the global object: {"person":[{"address":"B4-90 US"}]}
 
 // Let this GlobalObjectGuard take care this cleaning work.
 gb.refreshGlobalObject();
@@ -65,7 +65,7 @@ gb.refreshGlobalObject();
 // Check the status. Every Thing is Clean Now.
 result = gb.getDifference();
 console.log("Everything is clean by GlobalObjectGuard: " + JSON.stringify(result));
-// Everything is clean by GlobalObjectGuard: {}
+// Output: Everything is clean by GlobalObjectGuard: {}
 
 ```
 
