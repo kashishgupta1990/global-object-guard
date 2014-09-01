@@ -4,6 +4,6 @@
     "description": "",
     "main": "./lib/main",
     "dependencies": {
-        "jsondiffpatch": "^0.1.8"
+        "jsondiffpatch": "^0.1.9"
     }
 }

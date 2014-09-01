@@ -1,7 +1,7 @@
 # global-object-guard lets you control and Manage Global Object
 
 `global-object-guard` is a utility module which provides straight-forward, powerful functions
-for working with global objects in JavaScript. Although originally designed for
+for working with global objects in JavaScript. It designed for
 use with [Node.js](http://nodejs.org), it can not used in the
 browser.
 
